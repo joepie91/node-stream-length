@@ -1,0 +1,26 @@
+{
+  "name": "node-stream-length",
+  "version": "1.0.0",
+  "description": "For a given Buffer or Stream, this module will attempt to determine the total length of the stream contents. It currently supports Buffers, `fs` streams, `http` responses, and `request` objects, and allows for specifying custom stream types.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joepie91/node-stream-length"
+  },
+  "keywords": [
+    "stream",
+    "length",
+    "content-length"
+  ],
+  "author": "Sven Slootweg",
+  "license": "WTFPL",
+  "dependencies": {
+    "bluebird": "^2.6.2"
+  },
+  "devDependencies": {
+    "request": "^2.51.0"
+  }
+}
