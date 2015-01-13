@@ -1,6 +1,6 @@
 {
   "name": "stream-length",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "For a given Buffer or Stream, this module will attempt to determine the total length of the stream contents. It currently supports Buffers, `fs` streams, `http` responses, and `request` objects, and allows for specifying custom stream types.",
   "main": "index.js",
   "scripts": {
