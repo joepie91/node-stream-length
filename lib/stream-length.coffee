@@ -9,7 +9,6 @@ createRetrieverPromise = (stream, retriever) ->
 		retriever stream, (result) ->
 			if result?
 				if result instanceof Error
-					console.log "REJECTING...", result
 					reject result
 				else
 					resolve result
@@ -55,6 +54,14 @@ retrieveRequestHttpStream = (stream, callback) ->
 	else
 		callback null
 
+retrieveCombinedStream = (stream, callback) ->
+	if stream.getCombinedStreamLength?
+		stream.getCombinedStreamLength()
+			.then (length) -> callback(length)
+			.catch (err) -> callback(err)
+	else
+		callback null
+
 
 module.exports = (stream, options = {}, callback) ->
 	nodeifyWrapper callback, ->
@@ -66,7 +73,7 @@ module.exports = (stream, options = {}, callback) ->
 				retrieverPromises.push createRetrieverPromise(stream, retriever)
 
 		# Then, the standard ones.
-		for retriever in [retrieveBuffer, retrieveFilesystemStream, retrieveCoreHttpStream, retrieveRequestHttpStream]
+		for retriever in [retrieveBuffer, retrieveFilesystemStream, retrieveCoreHttpStream, retrieveRequestHttpStream, retrieveCombinedStream]
 			retrieverPromises.push createRetrieverPromise(stream, retriever)
 
 		Promise.any retrieverPromises

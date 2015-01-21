@@ -6,7 +6,7 @@ Supports both Promises and nodebacks.
 
 ## License
 
-[WTFPL](http://www.wtfpl.net/txt/copying/) or [CC0](https://creativecommons.org/publicdomain/zero/1.0/), whichever you prefer.
+[WTFPL](http://www.wtfpl.net/txt/copying/) or [CC0](https://creativecommons.org/publicdomain/zero/1.0/), whichever you prefer. A donation and/or attribution are appreciated, but not required.
 
 ## Donate
 
@@ -21,6 +21,14 @@ Pull requests welcome. Please make sure your modifications are in line with the 
 Build tool of choice is `gulp`; simply run `gulp` while developing, and it will watch for changes.
 
 Be aware that by making a pull request, you agree to release your modifications under the licenses stated above.
+
+## Supported stream types
+
+* Buffers
+* `fs.createReadStream` streams
+* `http.request` and `http.get` responses
+* `request` requests
+* `combined-stream2` streams
 
 ## Usage
 
