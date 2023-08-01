@@ -16,7 +16,7 @@
     "content-length"
   ],
   "author": "Sven Slootweg",
-  "license": "CCO",
+  "license": "CC0",
   "dependencies": {
     "bluebird": "^2.6.2"
   },
