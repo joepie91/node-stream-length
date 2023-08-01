@@ -1,6 +1,6 @@
 {
   "name": "stream-length",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "For a given Buffer or Stream, this module will attempt to determine the total length of the stream contents. It currently supports Buffers, `fs` streams, `http` responses, and `request` objects, and allows for specifying custom stream types.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "content-length"
   ],
   "author": "Sven Slootweg",
-  "license": "WTFPL",
+  "license": "CCO",
   "dependencies": {
     "bluebird": "^2.6.2"
   },
